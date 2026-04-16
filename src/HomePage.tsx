@@ -17,26 +17,24 @@ const HomePage = () => {
 	const [filtredCountries, seFilteredCountries] = useState<Country[] | null>(
 		null,
 	);
-	const [filterItem, setFilterItem] = useState<Region>(null);
 	if (!data) return null;
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
 		const { value } = e.target;
 		setSearch(value);
 		const searchCountries =
-			data && data?.filter((item) => item?.name.toLowerCase().includes(value));
+			data && data?.filter((item) => item?.name.toLowerCase().includes(search));
 		setSearchedCountries(searchCountries);
 	}
 	const onFilter = (region: Region) => {
-		setFilterItem(region);
 		const filter = data && data?.filter((item) => item.region === region);
-		setSearchedCountries(filter);
+		seFilteredCountries(filter);
 	};
 
 	return (
 		<div className="min-h-screen bg-neutral-50 w-full dark:bg-colors-blue-950 mt-20 px-4 md:px-[2.5rem] lg:px-[5rem] pb-16">
 			<Header />
-			<Routes>
+            <Routes >
 				<Route
 					path="/"
 					element={
@@ -53,7 +51,7 @@ const HomePage = () => {
 					}
 				/>
 				<Route path="/country/:id" element={<CountryDetailPage />} />
-			</Routes>
+            </Routes>
 		</div>
 	);
 };

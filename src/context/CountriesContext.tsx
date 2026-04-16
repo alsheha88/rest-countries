@@ -34,7 +34,7 @@ export function CountriesProvider({ children }: { children: React.ReactNode }) {
 		const fetchData = async () => {
 			try {
 				setIsLoading(true);
-				const res = await fetch("/data/data.json");
+				const res = await fetch(`${import.meta.env.BASE_URL}data.json`);
 				if (!res.ok) throw new Error("Failed to fetch data...");
 				const countriesData = await res.json();
 				setData(countriesData);
@@ -49,7 +49,6 @@ export function CountriesProvider({ children }: { children: React.ReactNode }) {
 		};
 		fetchData();
 	}, []);
-
 	return (
 		<CountriesContext.Provider value={{ data, error, isLoading }}>
 			{children}
