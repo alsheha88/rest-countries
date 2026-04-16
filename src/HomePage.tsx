@@ -17,7 +17,7 @@ const HomePage = () => {
 	const [filtredCountries, seFilteredCountries] = useState<Country[] | null>(
 		null,
 	);
-	if (!data) return null;
+	// if (!data) return null;
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
 		const { value } = e.target;
@@ -36,7 +36,7 @@ const HomePage = () => {
 			<Header />
             <Routes >
 				<Route
-					path=""
+					path="/"
 					element={
 						<>
 							<SearchFilterContainer
@@ -50,7 +50,7 @@ const HomePage = () => {
 						</>
 					}
 				/>
-				<Route path="country/:id" element={<CountryDetailPage />} />
+				<Route path="/country/:id" element={<CountryDetailPage />} />
             </Routes>
 		</div>
 	);
