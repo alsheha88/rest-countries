@@ -19,7 +19,7 @@ const FilterDropdown = ({ onFilter }: FilterProp) => {
 				Filter by Region <i className="fa-solid fa-angle-down"></i>
 			</span>
 			<ul
-				className={`py-4 w-full ${dropdown ? "flex" : "hidden"} flex-col gap-2 px-6  shadow-[0_2px_4px_rgba(0,0,0,0.06)] text-colors-blue-950 dark:bg-colors-blue-900 dark:text-white rounded-[5px] absolute top-[calc(100%+0.5rem)] z-50`}>
+				className={`py-4 w-full ${dropdown ? "flex" : "hidden"} flex-col gap-2 px-6  shadow-[0_2px_4px_rgba(0,0,0,0.06)] text-colors-blue-950 bg-colors-grey-50 dark:bg-colors-blue-900 dark:text-white rounded-[5px] absolute top-[calc(100%+0.5rem)] z-50`}>
 				<li
 					className="text-sm font-normal cursor-pointer"
 					onClick={() => {
