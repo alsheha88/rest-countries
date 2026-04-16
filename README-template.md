@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/alsheha88/rest-countries]
-- Live Site URL: [https://alsheha88.github.io/rest-countries/]
+- Live Site URL: [https://alsheha88.github.io/rest-countries]
 
 
 ### Built with
