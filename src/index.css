@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+	--color-colors-white: rgba(255, 255, 255, 1);
+	--color-colors-black: rgba(0, 0, 0, 1);
+	--color-colors-grey-50: rgba(252, 252, 252, 1);
+	--color-colors-blue-900: rgba(43, 56, 68, 1);
+	--color-colors-blue-950: rgba(32, 44, 54, 1);
+	--color-colors-grey-250: rgba(196, 196, 196, 1);
+	--color-colors-grey-300: rgba(178, 178, 178, 1);
+	--color-colors-grey-350: rgba(151, 151, 151, 1);
+	--color-colors-grey-400: rgba(128, 128, 128, 1);
+	--color-colors-grey-950: rgba(17, 21, 23, 1);
+
+	--font-nunito-sans: "Nunito Sans";
+
+	--spacing-100: 8px;
+	--spacing-200: 16px;
+	--spacing-300: 24px;
+	--spacing-400: 32px;
+	--spacing-500: 40px;
+	--spacing-600: 48px;
+	--spacing-700: 56px;
+	--spacing-800: 64px;
+	--spacing-900: 72px;
+	--spacing-1000: 80px;
+
+  --font-size-preset-1: 2rem;
+  --font-size-preset-2: 1.5rem;
+  --font-size-preset-3: 1.125rem;
+  --font-size-preset-4: 1rem;
+  --font-size-preset-5: 0.875rem;
+  --font-size-preset-6: 0.75rem;
+}
+@variant dark (&:where(.dark, .dark *));
+
+body{
+  font-family: var(--font-nunito-sans);
+  height: 100%;
+}
