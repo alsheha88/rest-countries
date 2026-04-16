@@ -1,13 +1,13 @@
 import HomePage from "./HomePage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				<Route path="/*" element={<HomePage />} />
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
